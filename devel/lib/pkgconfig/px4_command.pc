@@ -1,0 +1,8 @@
+prefix=/home/nvidia/amov_ws/devel
+
+Name: px4_command
+Description: Description of px4_command
+Version: 0.0.0
+Cflags: -I/home/nvidia/amov_ws/devel/include -I/home/nvidia/amov_ws/src/px4_command/include
+Libs: -L/home/nvidia/amov_ws/devel/lib 
+Requires: message_runtime

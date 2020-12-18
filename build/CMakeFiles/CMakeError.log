@@ -1,0 +1,56 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nvidia/amov_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_884d3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_884d3.dir/build.make CMakeFiles/cmTC_884d3.dir/build
+make[1]: Entering directory '/home/nvidia/amov_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_884d3.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_884d3.dir/CheckSymbolExists.c.o   -c /home/nvidia/amov_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_884d3
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_884d3.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_884d3.dir/CheckSymbolExists.c.o  -o cmTC_884d3 
+CMakeFiles/cmTC_884d3.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_884d3.dir/build.make:86: recipe for target 'cmTC_884d3' failed
+make[1]: *** [cmTC_884d3] Error 1
+make[1]: Leaving directory '/home/nvidia/amov_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_884d3/fast' failed
+make: *** [cmTC_884d3/fast] Error 2
+
+File /home/nvidia/amov_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nvidia/amov_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7cd5e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7cd5e.dir/build.make CMakeFiles/cmTC_7cd5e.dir/build
+make[1]: Entering directory '/home/nvidia/amov_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7cd5e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7cd5e.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7cd5e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cd5e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_7cd5e.dir/CheckFunctionExists.c.o  -o cmTC_7cd5e -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_7cd5e.dir/build.make:86: recipe for target 'cmTC_7cd5e' failed
+make[1]: *** [cmTC_7cd5e] Error 1
+make[1]: Leaving directory '/home/nvidia/amov_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7cd5e/fast' failed
+make: *** [cmTC_7cd5e/fast] Error 2
+
+

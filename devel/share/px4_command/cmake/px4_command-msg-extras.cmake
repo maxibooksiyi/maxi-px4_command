@@ -1,0 +1,2 @@
+set(px4_command_MESSAGE_FILES "/home/nvidia/amov_ws/src/px4_command/msg/ControlCommand.msg;/home/nvidia/amov_ws/src/px4_command/msg/TrajectoryPoint.msg;/home/nvidia/amov_ws/src/px4_command/msg/Trajectory.msg;/home/nvidia/amov_ws/src/px4_command/msg/AttitudeReference.msg;/home/nvidia/amov_ws/src/px4_command/msg/DroneState.msg;/home/nvidia/amov_ws/src/px4_command/msg/Topic_for_log.msg;/home/nvidia/amov_ws/src/px4_command/msg/ControlOutput.msg")
+set(px4_command_SERVICE_FILES "")
